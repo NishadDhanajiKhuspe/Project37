@@ -29,11 +29,13 @@ class Quiz {
   }
 
   play(){
-    //write code here to hide question elements
-    contestant.hide();
+    var display_anwser = 230;
+    question.hide();
+   
+    
     textSize(30);
     text("Game Start",120,100);
-    Player.getPlayerInfo();
+    Contestant.getContestantInfo();
 
     if(allContestants !== undefined){
       
@@ -45,27 +47,14 @@ class Quiz {
         else{
           fill("red");
         }
+        display_anwser +=30;
         
         textSize(15);
+        text(allContestants[plr].name + ": " + allContestants[plr].answer, 250,display_anwser);
+        fill("blue");
         text("*NOTE: Contestant who answered correct are hightlighted in green color ",130,230);
       }
     }
     
     }
   }
-
-
-    //write code to change the background color here
-
-    //write code to show a heading for showing the result of Quiz
-
-    //call getContestantInfo( ) here
-
-
-    //write condition to check if contestantInfor is not undefined
-
-    //write code to add a note here
-
-    //write code to highlight contest who answered correctly
-    
-
